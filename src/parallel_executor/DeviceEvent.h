@@ -12,7 +12,7 @@ public:
   /*!
    * \brief Конструктор. Необходим для заполнения информации об устройстве.
   */
-  DeviceEvent(std::shared_ptr<Device> device);
+  DeviceEvent(std::shared_ptr<Device> device) : device(device) {};
 
 protected:
   std::shared_ptr<Device> device;

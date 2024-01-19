@@ -6,4 +6,12 @@ project(parallel_executor VERSION 1.0.0 DESCRIPTION "Синхронизация 
 include_directories(${CMAKE_SOURCE_DIR}/src)
 
 enable_testing()
+add_subdirectory(src/parallel_executor)
+
 add_subdirectory(test)
+
+set(SRCS
+    ${CMAKE_SOURCE_DIR}/src/parallel_executor/main.cpp
+)
+
+add_executable(cpp_parallel ${SRCS})
