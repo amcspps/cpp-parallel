@@ -1,8 +1,5 @@
 #include "Parser.h"
 
-int main(int argc, char * argv[])
-{
-  auto eq = EventQueue();
-
+int main(int argc, char * argv[]) {
   return 0;
 }

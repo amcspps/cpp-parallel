@@ -34,15 +34,6 @@ public:
     threadB.join();
 
     while (true) {
-      auto event = queue_->pop(std::chrono::seconds(5));
-
-      if (event) {
-        event->toString();
-      }
-      else {
-        std::cout << "No events received for 5 seconds. Exiting...\n";
-        break;
-      }
     }
   };
 
@@ -55,7 +46,7 @@ private:
    * \param loop_count Беззнаковое целое число, задающее кол-во итераций чтения с устройства.
    * \param crush_index Целое число, указывающая на какой итерации сломается устройство.
   */
-  void read(std::shared_ptr<Device> device, std::chrono::seconds sleep_duration, size_t loop_count, int crush_index);
+  void read(std::shared_ptr<Device> device, std::chrono::seconds sleep_duration, size_t loop_count, int crush_index) {};
 
 private:
   std::shared_ptr<EventQueue> queue_;
