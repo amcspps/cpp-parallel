@@ -2,7 +2,8 @@
 #define DATAEVENT_H
 
 #include "DeviceEvent.h"
-
+#include "DeviceA.h"
+#include "DeviceB.h"
 class DataEvent : public DeviceEvent
 {
 public:

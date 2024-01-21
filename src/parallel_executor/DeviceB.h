@@ -10,7 +10,6 @@ public:
     return "B";
   };
   std::string getDataAsString() override {
-    std::this_thread::sleep_for(std::chrono::milliseconds(5));
     std::stringstream ss;
     ss << rand() % 199 << " " << rand() % 199 << " " << rand() % 199;
     return ss.str();
